@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    contextPath: /virtual-shop
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:virtualShop
+    driverClassName: org.h2.Driver
+    username: vtlShp
+    password: vtlShp@123
+    database-plataform: org.hibernate.dialect.H2Dialect
