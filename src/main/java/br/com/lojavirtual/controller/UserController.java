@@ -2,7 +2,7 @@ package br.com.lojavirtual.controller;
 
 import br.com.lojavirtual.dto.user.CreateUserDTO;
 import br.com.lojavirtual.dto.user.UserDTO;
-import br.com.lojavirtual.service.UserService;
+import br.com.lojavirtual.service.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

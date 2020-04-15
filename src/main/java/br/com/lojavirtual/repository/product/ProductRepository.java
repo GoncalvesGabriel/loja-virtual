@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-  @Query("SELECT new br.com.lojavirtual.dto.product.ProductDTO(prod.id, prod.name, prod.description, prod.price) from Product prod")
+  @Query("SELECT new br.com.lojavirtual.dto.product.ProductDTO(prod.id, prod.name, prod.description, prod.price) FROM Product prod")
   public List<ProductDTO> findAllDTO();
 
 }

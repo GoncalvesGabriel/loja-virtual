@@ -4,7 +4,6 @@ import br.com.lojavirtual.dto.product.CreateProductDTO;
 import br.com.lojavirtual.dto.product.ProductDTO;
 import br.com.lojavirtual.entity.product.Product;
 import br.com.lojavirtual.repository.product.ProductRepository;
-import io.swagger.annotations.Api;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
@@ -19,21 +18,30 @@ public class ProductService {
   private ProductRepository repository;
 
   @Autowired
-  private StorageService service;
+  private StorageService storageService;
 
   public ProductDTO create(CreateProductDTO productDTO) {
     Product product = productDTO.createProduct();
     repository.save(product);
-    service.create(product, productDTO.getInitialStorage());
+    storageService.create(product, productDTO.getInitialStorage());
     return new ProductDTO(product);
   }
 
   public void delete(Long id) {
+      storageService.deleteByProductId(id);
       repository.deleteById(id);
   }
 
-  public List<ProductDTO> findBy() {
+  public List<ProductDTO> find() {
     return repository.findAllDTO();
+  }
+
+  public Product findEntityById(Long id) {
+    Optional<Product> productOp = repository.findById(id);
+    if (productOp.isPresent()) {
+      return productOp.get();
+    }
+    throw new RuntimeException("Product not found");
   }
 
   public Optional<ProductDTO> findById(Long id) {

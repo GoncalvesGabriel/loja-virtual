@@ -24,14 +24,14 @@ public @Data class Storage {
   private Product product;
 
   @Column(name = "QUANTITY_STORAGE")
-  private double quantityInSTORAGE;
+  private double quantityInStorage;
 
   @Column(name = "QUANTITY_RESERVE")
   private double quantityInReserve;
 
-  public Storage(Product product, double quantityInSTORAGE) {
+  public Storage(Product product, double quantityInStorage) {
     this.product = product;
-    this.quantityInSTORAGE = quantityInSTORAGE;
+    this.quantityInStorage = quantityInStorage;
     this.quantityInReserve = 0;
   }
 }
