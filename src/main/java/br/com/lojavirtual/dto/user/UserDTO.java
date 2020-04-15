@@ -1,6 +1,6 @@
-package br.com.lojavirtual.dto;
+package br.com.lojavirtual.dto.user;
 
-import br.com.lojavirtual.entity.User;
+import br.com.lojavirtual.entity.user.User;
 import lombok.Data;
 
 public @Data class UserDTO {

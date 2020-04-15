@@ -1,8 +1,9 @@
 package br.com.lojavirtual.controller;
 
-import br.com.lojavirtual.dto.CreateUserDTO;
-import br.com.lojavirtual.dto.UserDTO;
+import br.com.lojavirtual.dto.user.CreateUserDTO;
+import br.com.lojavirtual.dto.user.UserDTO;
 import br.com.lojavirtual.service.UserService;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,7 +23,7 @@ public class UserController {
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  public UserDTO create(@RequestBody CreateUserDTO user) {
+  public UserDTO create(@Valid @RequestBody CreateUserDTO user) {
       return userService.create(user);
   }
 

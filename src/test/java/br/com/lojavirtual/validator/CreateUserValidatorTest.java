@@ -1,6 +1,6 @@
 package br.com.lojavirtual.validator;
 
-import br.com.lojavirtual.dto.CreateUserDTO;
+import br.com.lojavirtual.dto.user.CreateUserDTO;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
