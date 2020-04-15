@@ -4,6 +4,7 @@ import br.com.lojavirtual.dto.product.CreateProductDTO;
 import br.com.lojavirtual.dto.product.ProductDTO;
 import br.com.lojavirtual.entity.product.Product;
 import br.com.lojavirtual.repository.product.ProductRepository;
+import io.swagger.annotations.Api;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;

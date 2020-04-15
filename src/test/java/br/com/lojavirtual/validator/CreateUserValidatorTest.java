@@ -30,7 +30,7 @@ public class CreateUserValidatorTest {
   }
 
   @Test
-  public void sucess() {
+  public void success() {
     CreateUserDTO userDTO = Mockito.mock(CreateUserDTO.class);
     Mockito.when(userDTO.getPassword()).thenReturn("passwordOne");
     Mockito.when(userDTO.getRePassword()).thenReturn("passwordOne");
