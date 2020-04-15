@@ -1,8 +1,8 @@
 package br.com.lojavirtual.service;
 
-import br.com.lojavirtual.dto.CreateUserDTO;
-import br.com.lojavirtual.dto.UserDTO;
-import br.com.lojavirtual.entity.User;
+import br.com.lojavirtual.dto.user.CreateUserDTO;
+import br.com.lojavirtual.dto.user.UserDTO;
+import br.com.lojavirtual.entity.user.User;
 import br.com.lojavirtual.repository.UserRepository;
 import br.com.lojavirtual.validator.Validator;
 import org.springframework.beans.factory.annotation.Autowired;

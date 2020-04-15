@@ -1,4 +1,4 @@
-package br.com.lojavirtual.entity;
+package br.com.lojavirtual.entity.user;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ public @Data
 class User {
 
   @Id
-  @Column
+  @Column(name = "USER_ID")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
