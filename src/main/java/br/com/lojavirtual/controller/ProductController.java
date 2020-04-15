@@ -45,7 +45,7 @@ public class ProductController {
   @GetMapping()
   @ResponseStatus(HttpStatus.OK)
   public List<ProductDTO> search() {
-    return productService.findBy();
+    return productService.find();
   }
 
   @ApiOperation(value = "Create new product", consumes = "application/json", httpMethod = "POST")
