@@ -13,14 +13,18 @@ import org.springframework.stereotype.Component;
 public class UserService {
 
   @Autowired
-  Validator<CreateUserDTO> validator;
+  private Validator<CreateUserDTO> validator;
 
   @Autowired
-  UserRepository userRepository;
+  private UserRepository userRepository;
+
+  @Autowired
+  private RoleService roleService;
 
   public UserDTO create(CreateUserDTO userDTO) {
     validator.validate(userDTO);
     User user = userDTO.createUser();
+    user.addRole(roleService.getUserRole());
     userRepository.save(user);
     return new UserDTO(user);
   }
