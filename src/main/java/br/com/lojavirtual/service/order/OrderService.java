@@ -36,7 +36,7 @@ public class OrderService {
   private ProductService productService;
 
   public OrderDTO createOrder(CreateOrderDTO dto) {
-    User user = userService.findById(dto.getUser());
+    User user = userService.findById(1L);
     Order order = new Order(user);
     populateOrderItens(dto, order);
     validator.validate(order);

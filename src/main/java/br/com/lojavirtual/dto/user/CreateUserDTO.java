@@ -3,9 +3,13 @@ package br.com.lojavirtual.dto.user;
 import br.com.lojavirtual.entity.user.User;
 import java.util.ArrayList;
 import javax.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public @Data class CreateUserDTO {
 
   @NotNull

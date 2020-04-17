@@ -47,6 +47,7 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter {
     http.csrf().disable().authorizeRequests()
         .antMatchers(HttpMethod.POST, "/products").hasRole("ADMIN")
         .antMatchers(HttpMethod.DELETE, "/products/*").hasRole("ADMIN")
+        .antMatchers(HttpMethod.DELETE, "/users/*").hasRole("ADMIN")
         .antMatchers(HttpMethod.POST, "/users").permitAll()
         .antMatchers(HttpMethod.GET, "/products").permitAll()
         .antMatchers(HttpMethod.GET, "/products/*").permitAll()
