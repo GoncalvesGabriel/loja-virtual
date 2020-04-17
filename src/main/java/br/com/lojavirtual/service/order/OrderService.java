@@ -36,6 +36,7 @@ public class OrderService {
   private ProductService productService;
 
   public OrderDTO createOrder(CreateOrderDTO dto) {
+    //Todo: Take user authenticated
     User user = userService.findById(1L);
     Order order = new Order(user);
     populateOrderItens(dto, order);
