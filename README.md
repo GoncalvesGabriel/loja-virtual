@@ -13,6 +13,6 @@
 
 ### Links
 - Aplicação está disponível no link em https://test-virtual-shop.herokuapp.com/virtual-shop
-- Para testes da apis: https://test-virtual-shop.herokuapp.com/virtual-shop/swagger-ui.html
+- Para testes das apis: https://test-virtual-shop.herokuapp.com/virtual-shop/swagger-ui.html
 
 Para esses links o a aplicação já possuí um usuário disponível User: Admin, Password Admin@123
