@@ -1,7 +1,7 @@
 # Loja Virtual
 
 ### Objetivo
-- Apicação para compras,permitindo de cadastros de produtos, de usuários e solicitação de pedidos.
+- Aplicação de lojas, possuí apis de cadastros de produtos, de usuários e solicitação de pedidos.
 
 ### Tecnologias
 - Java
